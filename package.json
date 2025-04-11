@@ -182,7 +182,8 @@
     },
     "cordova": {
         "platforms": [
-            "ios"
+            "ios",
+            "android"
         ],
         "plugins": {
             "@moodlehq/cordova-plugin-advanced-http": {
