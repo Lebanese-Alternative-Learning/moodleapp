@@ -1,5 +1,5 @@
 {
-    "app_id": "com.tabshoura.beekee2210",
+    "app_id": "com.tabshoura.beekee2211",
     "appname": "Moodle Mobile",
     "versioncode": 50001,
     "versionname": "5.0.0",
@@ -76,9 +76,9 @@
     },
     "customurlscheme": "moodlemobile",
     "sites": [{
-    "url":"http://moodle.b2210.beekee.ch"
+    "url":"http://moodle.b2211.beekee.ch"
     }],
-    "sitename": "Tabshoura 2210",
+    "sitename": "Tabshoura 2211",
     "multisitesdisplay": "",
     "sitefindersettings": {},
     "onlyallowlistedsites": false,
