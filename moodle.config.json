@@ -1,5 +1,5 @@
 {
-    "app_id": "com.moodle.moodlemobile",
+    "app_id": "com.tabshoura.beekee2212",
     "appname": "Moodle Mobile",
     "versioncode": 50001,
     "versionname": "5.0.0",
@@ -68,18 +68,6 @@
         "zh-tw": "正體中文"
     },
     "wsservice": "moodle_mobile_app",
-    "demo_sites": {
-        "student": {
-            "url": "https://school.moodledemo.net",
-            "username": "student",
-            "password": "moodle25"
-        },
-        "teacher": {
-            "url": "https://school.moodledemo.net",
-            "username": "teacher",
-            "password": "moodle25"
-        }
-    },
     "defaultZoomLevel": "none",
     "zoomlevels": {
         "none": 100,
@@ -87,7 +75,10 @@
         "high": 120
     },
     "customurlscheme": "moodlemobile",
-    "sites": [],
+    "sites": [{
+    "url":"http://moodle.b2212.beekee.ch"
+    }],
+    "sitename": "Tabshoura 2212",
     "multisitesdisplay": "",
     "sitefindersettings": {},
     "onlyallowlistedsites": false,
