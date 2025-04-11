@@ -1,8 +1,8 @@
 {
-    "app_id": "com.moodle.moodlemobile",
+    "app_id": "com.cinemaximum.mymoodle",
     "appname": "Moodle Mobile",
-    "versioncode": 50001,
-    "versionname": "5.0.0",
+    "versioncode": 45000,
+    "versionname": "4.5.0",
     "cache_update_frequency_usually": 420000,
     "cache_update_frequency_often": 1200000,
     "cache_update_frequency_sometimes": 3600000,
@@ -68,18 +68,6 @@
         "zh-tw": "正體中文"
     },
     "wsservice": "moodle_mobile_app",
-    "demo_sites": {
-        "student": {
-            "url": "https://school.moodledemo.net",
-            "username": "student",
-            "password": "moodle25"
-        },
-        "teacher": {
-            "url": "https://school.moodledemo.net",
-            "username": "teacher",
-            "password": "moodle25"
-        }
-    },
     "defaultZoomLevel": "none",
     "zoomlevels": {
         "none": 100,
@@ -87,18 +75,20 @@
         "high": 120
     },
     "customurlscheme": "moodlemobile",
-    "sites": [],
+    "sites": [{
+    "url":"https://cinemaximum.consultedsolutions.com"
+    }],
+    "sitename": "CineMaximum",
     "multisitesdisplay": "",
     "sitefindersettings": {},
-    "onlyallowlistedsites": false,
+    "onlyallowlistedsites": true,
     "forcedefaultlanguage": false,
-    "privacypolicy": "https://moodle.net/moodle-app-privacy/",
+    "privacypolicy": "https://cinemaximum.consultedsolutions.com",
     "notificoncolor": "#f98012",
     "enableanalytics": false,
     "enableonboarding": true,
     "forceColorScheme": "",
     "forceLoginLogo": false,
-    "showTopLogo": "hidden",
     "ioswebviewscheme": "moodleappfs",
     "appstores": {
         "android": "com.moodle.moodlemobile",
@@ -135,6 +125,5 @@
             ]
         }
     },
-    "clearIABSessionWhenAutoLogin": "android",
-    "collapsibleItemsExpanded": false
+    "clearIABSessionWhenAutoLogin": "android"
 }

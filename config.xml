@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="50001" id="com.moodle.moodlemobile" ios-CFBundleVersion="5.0.0.1" version="5.0.0" versionCode="50001" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Moodle</name>
-    <description>Moodle official app</description>
-    <author email="mobile@moodle.com" href="http://moodle.com">Moodle Mobile team</author>
+<widget android-versionCode="45000" id="com.cinemaximum.mymoodle" ios-CFBundleVersion="4.5.0.0" version="4.5.0" versionCode="45000" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>CineMaximum</name>
+    <description>CineMaximum Branded App</description>
+    <author email="mobile@moodle.com" href="http://moodle.com">Lebanese Alternative Learning</author>
     <content src="index.html" />
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
     <access launch-external="yes" origin="mailto:*" />
     <access launch-external="yes" origin="geo:*" />
     <allow-navigation href="moodleappfs:*" />
+    <allow-navigation href="https://cinemaximum.consultedsolutions.com" />
     <allow-navigation href="cdvfile:*" />
     <allow-navigation href="content:*" />
     <allow-navigation href="data:*" />
@@ -28,18 +29,17 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="prerendered-icon" value="true" />
-    <preference name="AppendUserAgent" value="MoodleMobile 5.0.0 (50001)" />
+    <preference name="AppendUserAgent" value="MoodleMobile 4.5.0 (45000)" />
     <preference name="BackupWebStorage" value="none" />
-    <preference name="ScrollEnabled" value="true" />
+    <preference name="ScrollEnabled" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
     <preference name="HideKeyboardFormAccessoryBar" value="false" />
-    <preference name="KeyboardResizeMode" value="ionic" />
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="LoadUrlTimeoutValue" value="60000" />
     <preference name="load-url-timeout" value="60000" />
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="android-minSdkVersion" value="24" />
-    <preference name="android-targetSdkVersion" value="35" />
+    <preference name="android-targetSdkVersion" value="34" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <preference name="AndroidInsecureFileModeEnabled" value="true" />
     <preference name="CustomURLSchemePluginClearsAndroidIntent" value="true" />
@@ -50,17 +50,21 @@
     <preference name="WKFullScreenEnabled" value="true" />
     <preference name="AndroidXEnabled" value="true" />
     <preference name="GradlePluginGoogleServicesEnabled" value="true" />
-    <preference name="GradlePluginGoogleServicesVersion" value="4.4.2" />
-    <preference name="GradlePluginKotlinVersion" value="1.9.24" />
+    <preference name="GradlePluginGoogleServicesVersion" value="4.3.15" />
+    <preference name="GradlePluginKotlinVersion" value="1.7.21" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#FFFFFF" />
     <preference name="NavigationBarBackgroundColor" value="#FFFFFF" />
-    <preference name="AndroidEdgeToEdge" value="false" />
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
     <platform name="android">
-        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/android/android-splash.xml" />
+        <icon density="mdpi" src="resources/android/icon/drawable-mdpi-smallicon.png" />
+        <icon density="hdpi" src="resources/android/icon/drawable-hdpi-smallicon.png" />
+        <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-smallicon.png" />
+        <icon density="xxhdpi" src="resources/android/icon/drawable-xhdpi-smallicon.png" />
+        <icon density="xxxhdpi" src="resources/android/icon/drawable-xhdpi-smallicon.png" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/splash.png" />
         <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
         <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#FFFFFF" />
         <resource-file src="google-services.json" target="app/google-services.json" />
@@ -69,8 +73,9 @@
         <resource-file src="resources/android/icon/drawable-hdpi-smallicon.png" target="app/src/main/res/mipmap-hdpi/smallicon.png" />
         <resource-file src="resources/android/icon/drawable-xhdpi-smallicon.png" target="app/src/main/res/mipmap-xhdpi/smallicon.png" />
         <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+        <resource-file src="resources/android/xml/backup_rules.xml" target="app/src/main/res/xml/backup_rules.xml" />
         <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
-            <application android:allowBackup="false" android:largeHeap="true" android:networkSecurityConfig="@xml/network_security_config" />
+            <application android:allowBackup="true" android:dataExtractionRules="@xml/backup_rules" android:largeHeap="true" android:networkSecurityConfig="@xml/network_security_config" />
         </edit-config>
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
             <meta-data android:name="firebase_analytics_collection_deactivated" android:value="true" />
@@ -81,6 +86,7 @@
         </config-file>
     </platform>
     <platform name="ios">
+        <icon src="resources/icon.png" />
         <resource-file src="GoogleService-Info.plist" />
         <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
             <string>We need camera access to take pictures so you can use them for changing your profile picture, attach them in your tasks submission and share them with the teachers.</string>
@@ -92,7 +98,7 @@
             <true />
         </edit-config>
         <edit-config file="*-Info.plist" mode="merge" target="CFBundleShortVersionString">
-            <string>5.0.0</string>
+            <string>4.5.0</string>
         </edit-config>
         <edit-config file="*-Info.plist" mode="overwrite" target="CFBundleLocalizations">
             <array>
